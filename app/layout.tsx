@@ -11,8 +11,8 @@ const syne = Syne({
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["500"],
+  style: ["italic"],
 });
 
 const jakarta = Plus_Jakarta_Sans({
@@ -32,6 +32,8 @@ export const metadata: Metadata = {
   description: "Creative developer building expressive, performant digital experiences from Kathmandu.",
 };
 
+import SmoothScroll from "@/components/SmoothScroll";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -43,7 +45,9 @@ export default function RootLayout({
       className={`${syne.variable} ${cormorant.variable} ${jakarta.variable} ${mono.variable} h-full antialiased`}
     >
       <body>
-        {children}
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

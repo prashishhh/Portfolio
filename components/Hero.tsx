@@ -11,10 +11,10 @@ export default function Hero() {
   useEffect(() => {
     const tick = () => setTime(new Intl.DateTimeFormat("en-GB", {
       timeZone: "Asia/Kathmandu", hour: "2-digit", minute: "2-digit",
-      second: "2-digit", hour12: false,
+      hour12: false,
     }).format(new Date()));
     tick();
-    const timer = window.setInterval(tick, 1000);
+    const timer = window.setInterval(tick, 30_000);
     return () => window.clearInterval(timer);
   }, []);
 
@@ -52,9 +52,8 @@ export default function Hero() {
       <header className="profile-nav">
         <a className="hero-meta-item profile-nav-name" href="#top">
           <strong>Prashish Sapkota</strong>
-          <span>Product Builder</span>
         </a>
-        <p className="hero-meta-item profile-nav-meta"><strong>Kathmandu, Nepal</strong><span>{time || "--:--:--"} NPT</span></p>
+        <p className="hero-meta-item profile-nav-meta profile-nav-center" style={{ alignItems: "center", textAlign: "center" }}><strong>Kathmandu, Nepal</strong><span>{time || "--:--"} NPT</span></p>
         <nav className="hero-meta-item profile-links" aria-label="Primary navigation">
           <a href="#work">WORK</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a>
         </nav>
@@ -75,12 +74,6 @@ export default function Hero() {
 
       </main>
 
-      <div className="hero-bottom">
-        <p className="hero-bottom-item hero-intro">I design the system, build the interface, and ship the product.</p>
-        <a className="hero-bottom-item work-link" href="#work">
-          <span>See what I&apos;ve built ↘</span>
-        </a>
-      </div>
     </section>
   );
 }
