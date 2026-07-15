@@ -168,7 +168,7 @@ export default function Contact() {
             <span>THE SHORT VERSION</span>
             <textarea name="message" placeholder="What are we making?" rows={1} required />
           </label>
-          <button type="submit"><span>SEND THE BRIEF</span><b>↗</b></button>
+          <button type="submit"><span>SEND THE BRIEF</span><b>↗︎</b></button>
         </form>
       </div>
 
@@ -177,13 +177,13 @@ export default function Contact() {
           <div className="footer-cols">
             <div className="footer-col">
               <h4>CONNECT</h4>
-              <a href="https://github.com/prashishhh" target="_blank" rel="noreferrer">GITHUB ↗</a>
-              <a href="https://www.linkedin.com/in/prashishsapkota/" target="_blank" rel="noreferrer">LINKEDIN ↗</a>
+              <a href="https://github.com/prashishhh" target="_blank" rel="noreferrer">GITHUB ↗︎</a>
+              <a href="https://www.linkedin.com/in/prashishsapkota/" target="_blank" rel="noreferrer">LINKEDIN ↗︎</a>
             </div>
             <div className="footer-col">
               <h4>COLLABORATION</h4>
               <p>Open To Freelance Projects &amp; Remote Opportunities.</p>
-              <a href={`mailto:${email}`} className="footer-email-link">PRASHISHBUSINESS@GMAIL.COM ↗</a>
+              <a href={`mailto:${email}`} className="footer-email-link">PRASHISHBUSINESS@GMAIL.COM ↗︎</a>
             </div>
           </div>
         </div>
@@ -200,9 +200,9 @@ export default function Contact() {
         <div className="footer-bottom">
           <p>© 2026 PRASHISH SAPKOTA</p>
           <nav aria-label="Footer navigation">
-            <a href="#work">WORK</a><a href="#about">ABOUT</a><a href={`mailto:${email}`}>EMAIL ↗</a>
+            <a href="#work">WORK</a><a href="#about">ABOUT</a><a href={`mailto:${email}`}>EMAIL ↗︎</a>
           </nav>
-          <a href="#top" className="back-to-top-btn">BACK TO TOP ↑</a>
+          <a href="#top" className="back-to-top-btn">BACK TO TOP ↑︎</a>
         </div>
       </footer>
     </section>
