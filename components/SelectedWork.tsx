@@ -119,7 +119,7 @@ export default function SelectedWork() {
             <div className={`work-card-visual work-card-${project.visual}`} onPointerMove={moveVisual} onPointerLeave={resetVisual}>
               <div className="work-card-surface">
                 {project.images ? (
-                  <div className="work-gallery" data-lenis-prevent>
+                  <div className="work-gallery">
                     {project.images.map((image, index) => (
                       <div className="work-gallery-slide" key={`${image}-${index}`}>
                         <Image
