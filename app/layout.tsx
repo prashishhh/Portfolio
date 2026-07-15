@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Syne, Cormorant_Garamond, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const syne = Syne({
@@ -28,11 +29,9 @@ const mono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Prashish Sapkota — Creative Developer & Designer",
-  description: "Creative developer building expressive, performant digital experiences from Kathmandu.",
+  title: "Prashish Sapkota — Product Builder",
+  description: "Product builder designing and shipping thoughtful interfaces, scalable software, and AI-powered systems.",
 };
-
-import SmoothScroll from "@/components/SmoothScroll";
 
 export default function RootLayout({
   children,

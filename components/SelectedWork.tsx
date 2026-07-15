@@ -7,15 +7,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const projects = [
   { number: "01", name: "Torque X", type: "Vehicle parts & service platform", role: "Product design · Full-stack", visual: "torque", images: [
-    "/projects/torquex-hero.png",
-    "/projects/torquex-offer.png",
-    "/projects/torquex-service.png",
-    "/projects/torquex-feedback.png",
+    "/projects/torquex-hero.webp",
+    "/projects/torquex-offer.webp",
+    "/projects/torquex-service.webp",
+    "/projects/torquex-feedback.webp",
   ] },
   { number: "02", name: "PrepSter", type: "AI-powered interview preparation system", role: "Product design · Full-stack", visual: "prepster", images: [
-    "/projects/prepster-hero.png",
-    "/projects/prepster-tutoring.png",
-    "/projects/prepster-mentors.png",
+    "/projects/prepster-hero.webp",
+    "/projects/prepster-tutoring.webp",
+    "/projects/prepster-mentors.webp",
   ] },
   { number: "03", name: "RAG Chatbot", type: "Retrieval-augmented knowledge base", role: "RAG pipeline · Backend", visual: "rag", mark: "KNOWLEDGE" },
 ];
@@ -71,7 +71,7 @@ export default function SelectedWork() {
         if (image) timeline.fromTo(image, { scale: 1.06 }, { scale: 1, duration: 1, ease: "power3.out" }, 0);
       });
 
-      if (matchMedia("(min-width: 761px)").matches) {
+      if (matchMedia("(min-width: 901px)").matches) {
         gsap.utils.toArray<HTMLElement>(".work-card-gallery").forEach((card) => {
           const slides = gsap.utils.toArray<HTMLElement>(".work-gallery-slide", card);
           if (slides.length < 2) return;
@@ -126,9 +126,9 @@ export default function SelectedWork() {
                           src={image}
                           alt={`${project.name} screen ${index + 1}`}
                           fill
-                          sizes="(max-width: 760px) 100vw, 72vw"
+                          sizes="(max-width: 900px) 100vw, 72vw"
                           className="work-card-image"
-                          priority
+                          priority={project.number === "01" && index === 0}
                         />
                         <span>{String(index + 1).padStart(2, "0")}</span>
                       </div>
