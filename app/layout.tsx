@@ -29,8 +29,23 @@ const mono = Space_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://prashishsapkota.com.np"),
   title: "Prashish Sapkota — Product Builder",
   description: "Product builder designing and shipping thoughtful interfaces, scalable software, and AI-powered systems.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Prashish Sapkota — Product Builder",
+    description: "Thoughtful interfaces, scalable software, and AI-powered systems.",
+    url: "/",
+    siteName: "Prashish Sapkota",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prashish Sapkota — Product Builder",
+    description: "Thoughtful interfaces, scalable software, and AI-powered systems.",
+  },
 };
 
 export default function RootLayout({
